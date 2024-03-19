@@ -1,14 +1,28 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
+// import { getModelToken } from '@nestjs/mongoose';
 
 describe('UserController', () => {
   let controller: UserController;
 
+  const mockUserService = {
+    create: jest.fn(),
+    findAll: jest.fn(),
+    findOne: jest.fn(),
+    update: jest.fn(),
+    remove: jest.fn(),
+  };
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UserController],
-      providers: [UserService],
+      providers: [
+        {
+          provide: UserService,
+          useValue: mockUserService,
+        },
+      ],
     }).compile();
 
     controller = module.get<UserController>(UserController);
