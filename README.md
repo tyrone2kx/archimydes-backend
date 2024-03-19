@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript repository. This project contains the User Management System for Archimydes.
 
 ## Installation
 
@@ -45,18 +45,16 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
+## Swagger Documentation
+The api documentation for this project can be found at http://localhost:5000/api-docs (Replace localhost:5000 with your root domain).
+
 ## Test
 
 ```bash
 # unit tests
 $ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
 ```
+
 
 ## Support
 
